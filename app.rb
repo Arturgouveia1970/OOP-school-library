@@ -51,7 +51,6 @@ class Apps
     end
     puts 'Person created successfully'
   end
-  
   # create_student
   def create_student
     print 'Age: '
