@@ -13,14 +13,14 @@ class Apps
       '4' => 'Create a book',
       '5' => 'Create a rental',
       '6' => 'List all rentals for a given person id',
-      '7' => 'Exit',
+      '7' => 'Exit'
     }
 
     @list.each do |index, string|
       puts "#{index} - #{string}"
     end
 
-  integer(gets.chomp)
+    integer(gets.chomp)
   end
 
   run = Apps.new

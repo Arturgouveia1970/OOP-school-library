@@ -1,10 +1,10 @@
- # include files
- require_relative './person'
- require_relative './book'
- require_relative './teacher'
- require_relative './student'
- require_relative './rental'
- require 'date'
+# include files
+require_relative './person'
+require_relative './book'
+require_relative './teacher'
+require_relative './student'
+require_relative './rental'
+require 'date'
 
 # app class
 class Apps
@@ -13,7 +13,7 @@ class Apps
     @rentals = []
     @people = []
   end
-
+  
   # list all books
   def list_books
     if @books.empty?
@@ -102,7 +102,7 @@ class Apps
       puts 'No books available'
     elsif @people.size.zero?
       puts 'No person available'
-    else 
+    else
       puts 'Select a book from the following list by number: '
       @books.each_with_index { |book, index| puts "#{index}) Book Title: #{book.title}, Author: #{book.author}" }
       rental_book = gets.chomp.to_i
@@ -134,5 +134,4 @@ class Apps
   def convert_date(str)
     Date.parse(str)
   end
-end 
-  
+end
