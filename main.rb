@@ -20,7 +20,7 @@ class Apps
       puts "#{index} - #{string}"
     end
 
-    integer(gets.chomp)
+    Integer(gets.chomp)
   end
 
   run = Apps.new
