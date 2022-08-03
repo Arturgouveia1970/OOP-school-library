@@ -24,8 +24,8 @@ class Apps
   end
 
   run = Apps.new
-
-  loop do 
+  
+  loop do
     case main_menu
     when 1
       run.list_books
@@ -45,7 +45,7 @@ class Apps
     else
       puts ' Choose a number between 1 and 7'
     end
-  end 
+  end
 end
 
 def main
