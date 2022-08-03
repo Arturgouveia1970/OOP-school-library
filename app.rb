@@ -6,7 +6,7 @@
  require_relative './rental'
  require 'date'
 
- # app class
+# app class
 class Apps
   def initialize
     @books = []
@@ -134,6 +134,5 @@ class Apps
   def convert_date(str)
     Date.parse(str)
   end
-end
- 
+end 
   
