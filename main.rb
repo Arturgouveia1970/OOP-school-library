@@ -24,7 +24,6 @@ class Apps
   end
 
   run = Apps.new
-  
   loop do
     case main_menu
     when 1
