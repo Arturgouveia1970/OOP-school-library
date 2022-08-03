@@ -40,7 +40,6 @@ class Apps
   def create_person
     print 'do you want to create a student (1) or a teacher (2)? [input the number]:'
     option = gets chomp
-    
     case option
     when '1'
       create_student
