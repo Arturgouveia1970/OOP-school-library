@@ -7,7 +7,7 @@
  require 'date'
 
  # app class
-class app
+class Apps
   def initialize
     @books = []
     @rentals = []
@@ -135,5 +135,5 @@ class app
     Date.parse(str)
   end
 end
-  
+ 
   
