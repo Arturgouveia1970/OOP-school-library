@@ -13,7 +13,7 @@ class Apps
     @rentals = []
     @people = []
   end
-  
+
   # list all books
   def list_books
     if @books.empty?
