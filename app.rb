@@ -49,8 +49,9 @@ class Apps
       puts 'that is not valid input number'
       return
     end
-    puts 'Person created successfully'
+    puts 'Person created successfully'e
   end
+
   # create_student
   def create_student
     print 'Age: '
