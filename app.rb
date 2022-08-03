@@ -49,7 +49,7 @@ class Apps
       puts 'that is not valid input number'
       return
     end
-    puts 'Person created successfully'e
+    puts 'Person created successfully'
   end
 
   # create_student
