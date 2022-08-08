@@ -1,4 +1,5 @@
 require './app'
+require './user_choice'
 def menu
   puts 'Please choose an option by entering a number: '
 
