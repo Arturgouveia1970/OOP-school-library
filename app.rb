@@ -45,20 +45,6 @@ class Apps
     end
   end
 
-  # create book
-  def create_book
-    print 'Title: '
-    title = gets.chomp
-
-    print 'Author: '
-    author = gets.chomp
-
-    book = Book.new(title, author)
-    @books.push(book)
-
-    puts 'Book created successfully'
-  end
-
   # create rental
   def create_rental
     if @books.size.zero?
