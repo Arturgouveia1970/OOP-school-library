@@ -9,6 +9,8 @@ require './menu'
 
 # app class
 class Apps
+  attr_accessor :books, :rentals, :people
+
   def initialize
     @books = []
     @rentals = []
@@ -41,54 +43,6 @@ class Apps
     @people.map do |person|
       puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
-  end
-
-  # create person
-  def create_person
-    print 'do you want to create a student (1) or a teacher (2)? [input the number]:'
-    option = gets.chomp
-    case option
-    when '1'
-      create_student
-    when '2'
-      create_teacher
-    else
-      puts 'that is not valid input number'
-      return
-    end
-    puts 'Person created successfully'
-  end
-
-  # create_student
-  def create_student
-    print 'Age: '
-    age = gets.chomp
-
-    print 'Does student have parent permission? [Y/N]: '
-    parent_permission = gets.chomp.to_s.downcase == 'y'
-
-    print 'Name: '
-    name = gets.chomp
-
-    student = Student.new(age, name, parent_permission: parent_permission)
-    @people.push(student)
-    puts 'Student created successfully'
-  end
-
-  # create teacher
-  def create_teacher
-    print 'Age: '
-    age = gets.chomp
-
-    print 'Name: '
-    name = gets.chomp
-
-    print 'Specialization: '
-    specialization = gets.chomp
-
-    teacher = Teacher.new(specialization, age, name)
-    @people.push(teacher)
-    puts 'teacher created successfully'
   end
 
   # create book

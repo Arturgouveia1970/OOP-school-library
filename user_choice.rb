@@ -1,5 +1,6 @@
 require './app'
 require './menu'
+require './create_person'
 
 # rubocop:disable Metrics/CyclomaticComplexity
 def user_choice(choice)
