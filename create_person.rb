@@ -1,4 +1,5 @@
 require './create_student'
+require './create_teacher'
 # create person
 def create_person
   print 'do you want to create a student (1) or a teacher (2)? [input the number]:'
