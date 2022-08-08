@@ -1,7 +1,5 @@
-require './user_choice'
+require './app'
 def menu
-  puts 'Welcome to the School Library App!'
-  puts "\n"
   puts 'Please choose an option by entering a number: '
 
   list = {
@@ -18,5 +16,5 @@ def menu
     puts "#{index} - #{string}"
   end
 
-  gets.chomp.to_i
+  user_choice(gets.chomp.to_i)
 end

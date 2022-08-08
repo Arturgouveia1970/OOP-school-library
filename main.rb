@@ -1,9 +1,8 @@
 require './app'
-require './user_choice'
 
 def main
-  choice = menu
-  user_choice(choice)
+  app = Apps.new
+  app.greet
 end
 
 main
