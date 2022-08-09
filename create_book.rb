@@ -1,6 +1,6 @@
 require './book'
 require './app'
-require './data/preserve_data.rb'
+require './data/preserve_data'
 def create_book
   print 'Title: '
   title = gets.chomp

@@ -53,14 +53,11 @@ end
 def load_people
   if File.exist?('./data/people.json')
     file = File.open('./data/people.json')
-
     if File.empty?('./data/people.json')
       puts 'Please add people data if this is your first time visiting our app'
     else
       people = JSON.parse(File.read('./data/people.json'))
-      # p people.length()
       people.each do |person|
-        # p person
         if person['option'] == 'Student'
           student = Student.new(person['age'], person['name'])
           @people << student
@@ -74,8 +71,6 @@ def load_people
   else
     puts 'Please insert some data'
   end
-  puts 'Available people: '
-  @people.each { |p| puts "Name: #{p.name}, Age: #{p.age}" } unless @people.empty?
 end
 
 def save_student(name, age, parent_permission)
