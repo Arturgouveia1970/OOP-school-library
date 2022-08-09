@@ -4,9 +4,12 @@ require_relative './book'
 require_relative './teacher'
 require_relative './student'
 require_relative './rental'
+require_relative './create_person'
+require_relative './create_student'
+require_relative './create_teacher'
 require 'date'
 require './menu'
-require './data/preserve_data'
+require_relative './data/preserve_data'
 
 # app class
 class Apps
@@ -25,8 +28,8 @@ class Apps
   end
 
   def load_data
-    # load_people
-    # puts
+    load_people
+    puts
     load_books
     puts
     # load_rentals
