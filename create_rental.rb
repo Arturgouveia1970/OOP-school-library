@@ -19,6 +19,7 @@ def create_rental
     date = convert_date(gets)
     rental_detail = Rental.new(@people[rental_person], @books[rental_book], date)
     @rentals.push(rental_detail)
+    save_rental(date, @books[rental_book], @people[rental_person])
     puts 'Rental successfully created'
   end
 end

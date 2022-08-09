@@ -53,10 +53,10 @@ end
 def load_people
   if File.exist?('./data/people.json')
     file = File.open('./data/people.json')
-  
-      if File.empty?('./data/people.json')
-        puts 'Please add people data if this is your first time visiting our app'
-      else
+
+    if File.empty?('./data/people.json')
+      puts 'Please add people data if this is your first time visiting our app'
+    else
       people = JSON.parse(File.read('./data/people.json'))
       # p people.length()
       people.each do |person|
@@ -127,6 +127,50 @@ def save_teacher(name, age, specialization)
 
     myfile = File.open('./data/people.json', 'w')
     myfile.write(JSON.pretty_generate(teacher))
+    myfile.close
+  end
+end
+
+def load_rentals
+  if File.exist?('./data/rentals.json')
+    file = File.open('./data/rentals.json')
+
+    if file.size.zero?
+      puts 'Please add reseve some books first'
+    else
+      rentals = JSON.parse(File.read('./data/rentals.json'))
+      puts 'Reserved books: '
+      rentals.each do |rental|
+        puts "Name: #{rental['person']}, Book: #{rental['book']} on: #{rental['date']}"
+      end
+    end
+    file.close
+  else
+    puts 'No reservations found, please reseve some books first'
+  end
+end
+
+def save_rental(date, book, person)
+  obj = {
+    date: date,
+    person: person.name,
+    book: book.title
+  }
+
+  if File.exist?('./data/rentals.json')
+    file = File.open('./data/rentals.json')
+
+    if file.size.zero?
+      rental = [obj]
+    else
+      rental = JSON.parse(File.read('./data/rentals.json'))
+      rental << obj
+    end
+
+    file.close
+
+    myfile = File.open('./data/rentals.json', 'w')
+    myfile.write(JSON.pretty_generate(rental))
     myfile.close
   end
 end

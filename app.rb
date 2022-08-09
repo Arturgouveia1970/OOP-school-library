@@ -32,7 +32,7 @@ class Apps
     puts
     load_books
     puts
-    # load_rentals
+    load_rentals
   end
 
   # list all books
