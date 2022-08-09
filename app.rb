@@ -6,6 +6,7 @@ require_relative './student'
 require_relative './rental'
 require 'date'
 require './menu'
+require './data/preserve_data'
 
 # app class
 class Apps
@@ -21,6 +22,14 @@ class Apps
     puts 'Welcome to the School Library App!'
     puts "\n"
     menu
+  end
+
+  def load_data
+    # load_people
+    # puts
+    load_books
+    puts
+    # load_rentals
   end
 
   # list all books
