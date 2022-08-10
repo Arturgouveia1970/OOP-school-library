@@ -10,6 +10,7 @@ require_relative './create_teacher'
 require 'date'
 require './menu'
 require_relative './data/preserve_data'
+require 'pry'
 
 # app class
 class Apps
@@ -72,4 +73,5 @@ class Apps
   def convert_date(str)
     Date.parse(str)
   end
+  binding.pry
 end
