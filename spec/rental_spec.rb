@@ -1,6 +1,6 @@
-require './rental'
 require './student'
 require './book'
+require './rental'
 
 describe Rental do
   context 'instantiate rental' do
