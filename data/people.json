@@ -10,5 +10,18 @@
     "name": "Artur",
     "age": 31,
     "parent_permission": "n"
+  },
+  {
+    "type": "Teacher",
+    "specialization": "fibra",
+    "name": "wert",
+    "age": "44",
+    "parent_permission": true
+  },
+  {
+    "type": "Student",
+    "name": "wdwd",
+    "age": "12",
+    "parent_permission": false
   }
 ]
